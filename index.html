@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100&family=Hanken+Grotesk:wght@100&family=Montserrat:wght@100&family=Overpass:wght@100&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+
+
+
+
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="first" style="justify-content: space-around;">
+      <div class="iconimg">
+        <img src="./images/icon-star.svg" name="icon-star">
+      </div>
+      <h1>How did we do?</h1>
+      <p style="font-size: 15px;font-family:Overpass;">Please let us know how we did with your support</br> request.
+        All feedback is
+        appreciated
+        to help us</br> improve our offering!
+      </p>
+      <div class="rating-container" style="display: flex;flex-direction: row;justify-content: space-evenly;margin: 0%;">
+        <button class="rating-button" onclick="setRating(1)" style="  backface-visibility: hidden;
+        border-right: hidden;
+        border-left: hidden;
+        border-top: hidden;border-bottom: hidden; font-size: 15px;">1</button>
+        <button class="rating-button" onclick="setRating(2)" style="  backface-visibility: hidden;
+        border-right: hidden;
+        border-left: hidden;
+        border-top: hidden;border-bottom: hidden; font-size: 15px;">2</button>
+        <button class="rating-button" onclick="setRating(3)" style="  backface-visibility: hidden;
+        border-right: hidden;
+        border-left: hidden;
+        border-top: hidden;border-bottom: hidden; font-size: 15px;">3</button>
+        <button class="rating-button" onclick="setRating(4)" style="  backface-visibility: hidden;
+        border-right: hidden;
+        border-left: hidden;
+        border-top: hidden;border-bottom: hidden; font-size: 15px;">4</button>
+        <button class="rating-button" onclick="setRating(5)" style="  backface-visibility: hidden;
+        border-right: hidden;
+        border-left: hidden;
+        border-top: hidden;border-bottom: hidden; font-size: 15px;">5</button>
+      </div>
+      <div class="mybutton" style="padding-left: 40px;">
+        <button class="mybtn" style="align-items: center; border-radius: 30px; border-color: hsl(25, 97%, 53%);"
+          onclick="submitRating()">Submit</button>
+      </div>
+    </div>
+
+    <div class="second" id="thankyou" style="display: none;">
+      <img src="./images/illustration-thank-you.svg" name="illustration-thank-you"></br>
+      <div id="qww">
+        <p style="font-size: 15px; font-family: Overpass;">You selected <span id="selectedRating"> </span> out of 5</p>
+      </div>
+      <p style="font-size: 25px; font-family: Overpass;"><strong>Thank you!</strong> </p>
+      <p style="text-align: center; font-size: 15px;">We appreciate you taking the time to give a rating.</br> If you
+        ever need more support, don’t hesitate to </br> get in touch!</p>
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/thabrez1215">Thabrez M MD</a>.
+    </div>
+  </div>
+
+  <script>
+    let selectedRating;
+
+    function setRating(rating) {
+      selectedRating = rating;
+      document.getElementById('selectedRating').innerText = selectedRating;
+    }
+    // const buttons = document.querySelectorAll('.rating-button');
+    // buttons.forEach(button => {
+    //   button.style.backgroundColor = 'white'; 
+    // });
+
+    // const selectedButton = document.getElementById(`selectedrating`);
+    // if (selectedButton) {
+    //   selectedButton.style.backgroundColor = 'red'; 
+    // }
+
+    function submitRating() {
+      if (selectedRating) {
+        document.getElementById('selectedRating').innerText = selectedRating;
+        document.getElementById('thankyou').style.display = 'flex';
+        document.querySelector('.rating-container').style.display = 'none';
+        document.querySelector('.mybtn').style.display = 'none';
+        document.querySelector('.first').style.display = 'none';
+      }
+    }
+  </script>
+
+
+</body>
+
+
+</html>

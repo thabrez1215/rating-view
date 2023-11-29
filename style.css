@@ -1,0 +1,134 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: aquamarine;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 500px; */
+    height: 100vh;
+    font-weight: 400, 700;
+
+
+}
+
+
+.first {
+    background: hsl(213, 19%, 18%);
+    border-radius: 25px;
+    color: white;
+    height: 50vh;
+    justify-content: space-around;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+
+
+.mybtn {
+    background: hsl(25, 97%, 53%);
+    width: 300px;
+    color: white;
+    border-radius: 30px;
+    height: 40px;
+    border-color: hsl(25, 97%, 53%);
+
+}
+
+.iconimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: hsl(216, 12%, 8%);
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    border-color: hsl(216, 12%, 8%);
+}
+
+
+
+#thankyou {
+    background: hsl(213, 19%, 18%);
+    border-radius: 15px;
+    color: white;
+    height: 50vh;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 400, 700;
+}
+
+.rating-button {
+    border-radius: 90px;
+    background-color: hsl(213deg 15.2% 27.34%);
+    color: #ffffff80;
+    block-size: 60px;
+    width: 60px;
+
+}
+
+
+.rating-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.rating-button:hover {
+    background-color: hsl(213, 19%, 18%);
+
+}
+
+
+#qww {
+    border-radius: 30px;
+    background: hsl(213deg 10.66% 32.74%);
+    width: 175px;
+    color: hsl(25, 97%, 53%);
+    text-align: center;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
+
+
+
+.main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 375px) {
+    .first {
+        width: 96%;
+    }
+
+}
+
+@media only screen and (min-width: 376px) {}
